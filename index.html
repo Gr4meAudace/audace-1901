@@ -2,125 +2,756 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Sito ufficiale dell'Audace Roma 1901"
+    content="Sito ufficiale ACS Audace Roma 1901. Storia, squadre, partite, notizie e partner."
   >
 
-  <title>Audace Roma 1901 | Sito ufficiale</title>
+  <meta name="theme-color" content="#8f1422">
+
+  <title>ACS Audace Roma 1901 | Sito ufficiale</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-   <a class="logo-link" href="#home">
-  <img
-    class="logo-ufficiale"
-    src="Stemma_ACS_Audace_png.png"
-    alt="Stemma_ACS_Audace_png"
-  >
-</a>
-    <nav>
+  <!-- INTESTAZIONE -->
+  <header class="site-header">
+
+    <a class="logo-link" href="#home" aria-label="Torna alla Home">
+      <img
+        class="logo-ufficiale"
+        src="Stemma_ACS_Audace_png.png"
+        alt="Stemma ACS Audace Roma 1901"
+      >
+    </a>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Apri il menu"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      class="main-navigation"
+      id="main-navigation"
+      aria-label="Navigazione principale"
+    >
       <a href="#home">Home</a>
-      <a href="#storia">Storia</a>
-      <a href="#progetto">Progetto</a>
+      <a href="#club">Club</a>
       <a href="#squadre">Squadre</a>
+      <a href="#partite">Partite</a>
+      <a href="#news">News</a>
       <a href="#partner">Partner</a>
       <a href="#contatti">Contatti</a>
+
+      <a class="nav-social" href="#social">
+        Seguici
+      </a>
     </nav>
+
   </header>
+
 
   <main>
 
-    <section id="home" class="hero">
-      <p>ROMA · DAL 1901</p>
+    <!-- APERTURA HOME -->
+    <section class="hero" id="home">
 
-      <h1>
-        Una storia antica.<br>
-        Un futuro da scrivere.
-      </h1>
+      <div class="hero-overlay"></div>
 
-      <p>
-        Audace Roma 1901 torna a raccontare la propria identità
-        attraverso lo sport, il territorio e una nuova visione.
-      </p>
+      <div class="hero-background-placeholder">
+        <span>FOTO PRINCIPALE IN ARRIVO</span>
+      </div>
 
-      <a href="#progetto">Scopri il progetto</a>
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          Roma · Dal 1901
+        </p>
+
+        <h1>
+          Dal 1901,<br>
+          Roma non smette<br>
+          di essere Audace.
+        </h1>
+
+        <p class="hero-description">
+          Una storia nata nello sport romano.
+          Un’identità che torna in campo.
+        </p>
+
+        <div class="hero-actions">
+
+          <a class="button button-primary" href="#club">
+            Scopri il club
+          </a>
+
+          <a class="button button-outline" href="#squadre">
+            Le nostre squadre
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-year" aria-hidden="true">
+        1901
+      </div>
+
     </section>
 
-    <section id="storia">
-      <p>LE NOSTRE RADICI</p>
 
-      <h2>Una storia iniziata nel 1901</h2>
+    <!-- PARTITE -->
+    <section class="matches-section" id="partite">
 
-      <p>
-        Audace rappresenta una tradizione sportiva profondamente
-        legata alla città di Roma. Il nuovo progetto nasce per
-        custodire questa identità e riportarla nel presente.
-      </p>
+      <div class="section-heading">
+
+        <div>
+          <p class="section-label">Il campo</p>
+          <h2>Partite</h2>
+        </div>
+
+        <a class="text-link" href="#">
+          Calendario completo
+        </a>
+
+      </div>
+
+      <div class="matches-grid">
+
+        <!-- PROSSIMA PARTITA -->
+        <article class="match-card match-card-featured">
+
+          <div class="match-card-header">
+            <span>Prossima partita</span>
+            <span>Competizione da definire</span>
+          </div>
+
+          <div class="match-date">
+            <strong>DATA</strong>
+            <span>Ora e campo da comunicare</span>
+          </div>
+
+          <div class="match-teams">
+
+            <div class="match-team">
+              <img
+                src="Stemma_ACS_Audace_png.png"
+                alt="ACS Audace Roma 1901"
+              >
+              <strong>Audace Roma 1901</strong>
+            </div>
+
+            <div class="match-versus">
+              VS
+            </div>
+
+            <div class="match-team match-team-placeholder">
+              <div class="team-logo-placeholder">
+                LOGO
+              </div>
+              <strong>Avversaria</strong>
+            </div>
+
+          </div>
+
+          <a class="button button-dark" href="#">
+            Dettagli partita
+          </a>
+
+        </article>
+
+
+        <!-- ULTIMO RISULTATO -->
+        <article class="match-card">
+
+          <div class="match-card-header">
+            <span>Ultimo risultato</span>
+            <span>Risultato da inserire</span>
+          </div>
+
+          <div class="last-result">
+
+            <div>
+              <span>Audace Roma 1901</span>
+              <strong>–</strong>
+            </div>
+
+            <div>
+              <span>Avversaria</span>
+              <strong>–</strong>
+            </div>
+
+          </div>
+
+          <p class="match-info">
+            Data, competizione e campo saranno inseriti
+            quando disponibili.
+          </p>
+
+          <a class="text-link" href="#">
+            Tabellino e highlights
+          </a>
+
+        </article>
+
+      </div>
+
     </section>
 
-    <section id="progetto">
-      <p>LA NUOVA AUDACE</p>
 
-      <h2>Identità, sport e territorio</h2>
+    <!-- SQUADRE -->
+    <section class="teams-section" id="squadre">
 
-      <article>
-        <h3>Storia</h3>
-        <p>Valorizzare il patrimonio e le radici dell’Audace.</p>
-      </article>
+      <div class="section-heading">
 
-      <article>
-        <h3>Competizione</h3>
-        <p>Costruire un progetto sportivo ambizioso e sostenibile.</p>
-      </article>
+        <div>
+          <p class="section-label">Area sportiva</p>
+          <h2>Le nostre squadre</h2>
+        </div>
 
-      <article>
-        <h3>Comunità</h3>
-        <p>Riunire atleti, tifosi, partner e territorio.</p>
-      </article>
+        <p class="section-introduction">
+          Due formazioni, un’unica identità.
+          Un progetto costruito per crescere nel presente
+          e nel futuro.
+        </p>
+
+      </div>
+
+      <div class="teams-grid">
+
+        <!-- SERIE A -->
+        <article class="team-card">
+
+          <div class="team-image-placeholder">
+            <span>FOTO SERIE A IN ARRIVO</span>
+          </div>
+
+          <div class="team-card-content">
+
+            <p class="team-category">
+              Prima squadra
+            </p>
+
+            <h3>Serie A</h3>
+
+            <p>
+              La formazione principale dell’Audace Roma 1901,
+              protagonista nel massimo campionato.
+            </p>
+
+            <a class="button button-primary" href="#">
+              Scopri la squadra
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- SERIE A2 -->
+        <article class="team-card">
+
+          <div class="team-image-placeholder">
+            <span>FOTO SERIE A2 IN ARRIVO</span>
+          </div>
+
+          <div class="team-card-content">
+
+            <p class="team-category">
+              Seconda squadra
+            </p>
+
+            <h3>Serie A2</h3>
+
+            <p>
+              Una squadra pensata per ampliare il movimento
+              sportivo e costruire nuove opportunità.
+            </p>
+
+            <a class="button button-primary" href="#">
+              Scopri la squadra
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
     </section>
 
-    <section id="squadre">
-      <p>AREA SPORTIVA</p>
 
-      <h2>Le nostre squadre</h2>
+    <!-- CLUB E STORIA -->
+    <section class="history-section" id="club">
 
-      <p>
-        Formazioni, atleti, staff e appuntamenti
-        dell’Audace Roma 1901.
-      </p>
+      <div class="history-introduction">
+
+        <p class="section-label">Il club</p>
+
+        <h2>
+          Una storia iniziata<br>
+          nel 1901.
+        </h2>
+
+        <p>
+          L’Audace rappresenta una delle realtà sportive
+          storiche della Capitale. Il nuovo progetto nasce
+          per custodirne l’identità e riportarla nel presente.
+        </p>
+
+        <a class="button button-outline-light" href="#">
+          Scopri tutta la storia
+        </a>
+
+      </div>
+
+
+      <div class="timeline">
+
+        <article class="timeline-item">
+
+          <span class="timeline-year">1901</span>
+
+          <div>
+            <h3>Le origini</h3>
+            <p>
+              Nasce una realtà destinata a entrare nella
+              storia dello sport romano.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="timeline-item">
+
+          <span class="timeline-year">1927</span>
+
+          <div>
+            <h3>La storia di Roma</h3>
+            <p>
+              Un passaggio centrale nel racconto sportivo
+              della città e delle sue società storiche.
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="timeline-item">
+
+          <span class="timeline-year">OGGI</span>
+
+          <div>
+            <h3>Il ritorno in campo</h3>
+            <p>
+              Una nuova fase sportiva che unisce tradizione,
+              ambizione e progettualità.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+
     </section>
 
-    <section id="partner">
-      <p>INSIEME NEL PROGETTO</p>
 
-      <h2>Partner e sponsor</h2>
+    <!-- FRASE IDENTITARIA -->
+    <section class="manifesto-section">
 
-      <p>
-        Uno spazio dedicato alle aziende che sostengono
-        la crescita e il futuro dell’Audace.
-      </p>
+      <blockquote>
+        Non stiamo creando una nuova identità.
+        Stiamo riportando in campo quella
+        che esiste dal 1901.
+      </blockquote>
+
     </section>
 
-    <section id="contatti">
-      <p>ENTRA IN CONTATTO</p>
 
-      <h2>Costruiamo insieme il futuro</h2>
+    <!-- PROGETTO -->
+    <section class="project-section" id="progetto">
 
-      <a href="mailto:info@audace1901.it">Contattaci</a>
+      <div class="section-heading">
+
+        <div>
+          <p class="section-label">La nuova Audace</p>
+          <h2>Il nostro progetto</h2>
+        </div>
+
+        <p class="section-introduction">
+          Un percorso sportivo e culturale fondato
+          su tre principi essenziali.
+        </p>
+
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+
+          <span class="project-number">01</span>
+
+          <h3>Eredità</h3>
+
+          <p>
+            Preservare e raccontare il patrimonio storico
+            e sportivo dell’Audace.
+          </p>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <span class="project-number">02</span>
+
+          <h3>Competizione</h3>
+
+          <p>
+            Costruire un movimento ambizioso,
+            sostenibile e riconoscibile.
+          </p>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <span class="project-number">03</span>
+
+          <h3>Futuro</h3>
+
+          <p>
+            Creare nuove squadre, opportunità
+            e un percorso sportivo duraturo.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWS -->
+    <section class="news-section" id="news">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="section-label">Dal mondo Audace</p>
+          <h2>Ultime notizie</h2>
+        </div>
+
+        <a class="text-link" href="#">
+          Tutte le news
+        </a>
+
+      </div>
+
+      <div class="news-grid">
+
+        <article class="news-card">
+
+          <div class="news-image-placeholder">
+            <span>IMMAGINE NEWS</span>
+          </div>
+
+          <div class="news-card-content">
+
+            <p class="news-date">
+              Data da inserire
+            </p>
+
+            <h3>
+              Titolo della prima notizia
+            </h3>
+
+            <p>
+              Qui inseriremo una breve anticipazione
+              della notizia pubblicata dal club.
+            </p>
+
+            <a class="text-link" href="#">
+              Leggi la notizia
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+          <div class="news-image-placeholder">
+            <span>IMMAGINE NEWS</span>
+          </div>
+
+          <div class="news-card-content">
+
+            <p class="news-date">
+              Data da inserire
+            </p>
+
+            <h3>
+              Titolo della seconda notizia
+            </h3>
+
+            <p>
+              Questo spazio potrà essere dedicato
+              a squadra, mercato, eventi o partnership.
+            </p>
+
+            <a class="text-link" href="#">
+              Leggi la notizia
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+          <div class="news-image-placeholder">
+            <span>IMMAGINE NEWS</span>
+          </div>
+
+          <div class="news-card-content">
+
+            <p class="news-date">
+              Data da inserire
+            </p>
+
+            <h3>
+              Titolo della terza notizia
+            </h3>
+
+            <p>
+              Qui potremo raccontare risultati,
+              presentazioni e iniziative del club.
+            </p>
+
+            <a class="text-link" href="#">
+              Leggi la notizia
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- PARTNER -->
+    <section class="partners-section" id="partner">
+
+      <div class="section-heading">
+
+        <div>
+          <p class="section-label">Insieme nel progetto</p>
+          <h2>Partner</h2>
+        </div>
+
+        <p class="section-introduction">
+          Aziende e realtà che condividono la visione
+          e sostengono il percorso dell’Audace Roma 1901.
+        </p>
+
+      </div>
+
+      <div class="main-partner">
+
+        <span>Main partner</span>
+
+        <div class="partner-logo-placeholder">
+          LOGO MAIN PARTNER
+        </div>
+
+      </div>
+
+      <div class="partner-grid">
+
+        <div class="partner-logo-placeholder">
+          LOGO PARTNER
+        </div>
+
+        <div class="partner-logo-placeholder">
+          LOGO PARTNER
+        </div>
+
+        <div class="partner-logo-placeholder">
+          LOGO PARTNER
+        </div>
+
+        <div class="partner-logo-placeholder">
+          LOGO PARTNER
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DIVENTA PARTNER -->
+    <section class="partner-cta">
+
+      <div>
+
+        <p class="section-label">
+          Opportunità commerciali
+        </p>
+
+        <h2>
+          Entra nella storia<br>
+          dell’Audace.
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p>
+          Affianca il tuo brand a una realtà sportiva
+          storica, ambiziosa e profondamente legata
+          alla città di Roma.
+        </p>
+
+        <a class="button button-light" href="#contatti">
+          Diventa partner
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTATTI -->
+    <section class="contact-section" id="contatti">
+
+      <div class="contact-heading">
+
+        <p class="section-label">Contatti</p>
+
+        <h2>
+          Costruiamo insieme<br>
+          il futuro.
+        </h2>
+
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-item">
+
+          <span>Email generale</span>
+
+          <a href="mailto:info@acsaudace1901.it">
+            info@acsaudace1901.it
+          </a>
+
+        </div>
+
+        <div class="contact-item">
+
+          <span>Area commerciale</span>
+
+          <a href="mailto:partner@acsaudace1901.it">
+            partner@acsaudace1901.it
+          </a>
+
+        </div>
+
+        <div class="contact-item">
+
+          <span>Sede</span>
+
+          <p>
+            Roma, Italia
+          </p>
+
+        </div>
+
+      </div>
+
     </section>
 
   </main>
 
-  <footer>
-    <p>© 2026 Audace Roma 1901</p>
-    <p>Roma · Italia</p>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="social">
+
+    <div class="footer-brand">
+
+      <img
+        src="Stemma_ACS_Audace_png.png"
+        alt="ACS Audace Roma 1901"
+      >
+
+      <div>
+        <strong>ACS Audace Roma 1901</strong>
+        <span>Una storia romana dal 1901</span>
+      </div>
+
+    </div>
+
+    <div class="footer-links">
+
+      <a href="#club">Club</a>
+      <a href="#squadre">Squadre</a>
+      <a href="#partite">Partite</a>
+      <a href="#news">News</a>
+      <a href="#partner">Partner</a>
+      <a href="#contatti">Contatti</a>
+
+    </div>
+
+    <div class="footer-social">
+
+      <span>Seguici</span>
+
+      <div>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 ACS Audace Roma 1901
+      </p>
+
+      <p>
+        Tutti i diritti riservati
+      </p>
+
+    </div>
+
   </footer>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
