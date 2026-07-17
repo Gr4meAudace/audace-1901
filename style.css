@@ -1877,3 +1877,8 @@ font-size: 1.1rem;
 line-height: 1.8;
 
 }
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
