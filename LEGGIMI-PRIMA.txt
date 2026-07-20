@@ -1,0 +1,27 @@
+ACS AUDACE — PACCHETTO COMPLETO
+
+MODIFICHE GIÀ APPLICATE
+- Menu uniformato in tutte le pagine.
+- Footer identico in tutte le pagine.
+- Instagram, TikTok e YouTube corretti ovunque.
+- Favicon e logo ufficiale configurati.
+- SEO di base: title, description, canonical, Open Graph, Twitter Card e dati strutturati.
+- robots.txt, sitemap.xml, CNAME, .nojekyll e pagina 404.
+- Migliorata accessibilità: link per saltare al contenuto, focus visibile, gestione menu con ESC.
+- Migliorato il menu mobile.
+- Pagina Prima squadra ripulita: rimossi allenatore, campo di casa e seconda squadra.
+- Pagina Contatti semplificata: eliminato il modulo mailto poco affidabile.
+- YouTube aggiunto anche alla pagina Contatti.
+- Fonti storiche aggiunte alla pagina 1901.
+- Corretto il frammento CSS non valido presente alla fine di style.css.
+
+NON SONO STATI INVENTATI
+- Foto
+- giocatori
+- risultati
+- sponsor
+- calendari
+- classifiche
+
+COME CARICARE
+Segui il file GUIDA-CARICAMENTO-GITHUB.txt.

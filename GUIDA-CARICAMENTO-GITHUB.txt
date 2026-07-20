@@ -1,0 +1,19 @@
+COME SOSTITUIRE IL SITO SU GITHUB
+
+1. Scarica e apri questo ZIP sul computer.
+2. Dentro troverai direttamente tutti i file del sito.
+3. Apri il repository GitHub `Gr4meAudace/audace-1901`.
+4. Nella pagina principale del repository clicca `Add file`.
+5. Clicca `Upload files`.
+6. Trascina TUTTI i file estratti dallo ZIP nella finestra GitHub.
+7. GitHub mostrerà i file esistenti come modificati e i nuovi file come aggiunti.
+8. Nel campo del messaggio scrivi:
+   Aggiornamento completo sito ACS Audace
+9. Clicca `Commit changes`.
+10. Attendi 1-3 minuti e aggiorna il sito con Cmd+Shift+R su Mac oppure Ctrl+F5 su Windows.
+
+IMPORTANTE
+- Carica i file contenuti nello ZIP, non la cartella esterna.
+- Non eliminare il repository.
+- Il file CNAME contiene già `www.acsaudace1901.it`.
+- Se GitHub rifiuta il dominio personalizzato, i file del sito funzioneranno comunque sul link GitHub Pages.
