@@ -1,0 +1,27 @@
+PAGINA PUGILATO — ACS AUDACE
+
+CONTENUTO
+- Nuova pagina pugilato.html.
+- Foto di copertina della Sala Gigli.
+- Ring storico.
+- Galleria di ospiti e ricordi.
+- Trofei, bandiera e sede.
+- Pulsante WhatsApp: +39 331 161 7986.
+- Numero fisso: 06 3107 4141.
+- Link Pugilato aggiunto al menu e al footer di tutte le pagine.
+- Sitemap aggiornata.
+- Rimossa la scritta visibile «Vai al contenuto» dalle pagine incluse.
+
+COME CARICARE
+1. Estrai questo ZIP.
+2. Apri GitHub > repository audace-1901.
+3. Clicca Add file > Upload files.
+4. Trascina TUTTI i file estratti dallo ZIP.
+5. Scrivi come messaggio:
+   Aggiunta pagina Pugilato
+6. Clicca Commit changes.
+7. Attendi 1-3 minuti.
+8. Aggiorna il sito con Cmd+Shift+R su Mac oppure Ctrl+F5 su Windows.
+
+IMPORTANTE
+Carica i file contenuti nello ZIP, non lo ZIP intero.
