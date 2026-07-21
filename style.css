@@ -2364,277 +2364,111 @@ main section p {
   }
 }
 
-/* PAGINA PUGILATO V2 */
+/* HOME POLISPORTIVA */
 
-.boxing-page { background: #100708; }
+.home-multisport { background: var(--avorio); }
 
-.boxing-hero-v2 {
+.multi-hero {
   position: relative;
   min-height: calc(100vh - 112px);
+  padding: 90px 7%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   overflow: hidden;
   color: var(--bianco);
-  background: #080808;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(198,161,90,.2), transparent 28%),
+    linear-gradient(125deg, #220006 0%, #520912 52%, #941827 100%);
 }
 
-.boxing-hero-v2-image {
+.multi-hero-glow {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 21px, rgba(255,255,255,.025) 21px, rgba(255,255,255,.025) 23px);
 }
 
-.boxing-hero-v2-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(7,4,5,.96), rgba(7,4,5,.52) 58%, rgba(7,4,5,.16)),
-    linear-gradient(0deg, rgba(7,4,5,.9), transparent 55%);
+.multi-hero-content { position: relative; z-index: 2; max-width: 1050px; }
+.multi-hero-logo { width: auto; height: 135px; margin-bottom: 24px; }
+.multi-hero h1 { font-family: var(--font-titoli); font-size: clamp(64px, 8.5vw, 124px); font-weight: 600; line-height: .86; }
+.multi-hero-content > p:not(.eyebrow) { max-width: 700px; margin: 30px 0 36px; color: rgba(255,255,255,.78); font-size: 18px; }
+.multi-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.multi-hero-word { position: absolute; right: -2vw; bottom: -6vw; color: rgba(255,255,255,.045); font-family: var(--font-titoli); font-size: clamp(130px, 25vw, 390px); font-weight: 700; line-height: .7; }
+
+.home-news-first,
+.home-club-general,
+.home-partners-simple,
+.home-disciplines,
+.home-contact-final { padding: 110px 7%; }
+
+.home-news-first { background: var(--avorio); }
+.home-news-grid { display: grid; grid-template-columns: 1.25fr .75fr .75fr; border: 1px solid var(--bordo); }
+.home-news-grid article { min-height: 330px; padding: 42px 36px; display: flex; flex-direction: column; justify-content: flex-end; border-right: 1px solid var(--bordo); background: #fff; }
+.home-news-grid article:last-child { border-right: 0; }
+.home-news-main { color: var(--bianco); background: var(--rosso-scuro) !important; }
+.home-news-grid span { margin-bottom: 14px; color: var(--oro); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.home-news-grid h3 { margin-bottom: 18px; font-family: var(--font-titoli); font-size: clamp(32px, 3.3vw, 52px); font-weight: 600; line-height: .98; }
+.home-news-grid p { margin-bottom: 24px; color: var(--grigio); }
+.home-news-main p { color: rgba(255,255,255,.72); }
+.home-news-main .text-link { color: var(--oro); }
+
+.home-club-general { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; color: var(--bianco); background: #111; }
+.home-club-general h2,
+.home-history-content h2,
+.home-disciplines h2,
+.home-contact-final h2 { font-family: var(--font-titoli); font-size: clamp(58px, 7vw, 100px); font-weight: 600; line-height: .9; }
+.home-club-general-copy > p:not(.section-label) { max-width: 680px; margin: 30px 0 34px; color: rgba(255,255,255,.7); font-size: 17px; line-height: 1.9; }
+.home-club-statements { border-top: 1px solid rgba(255,255,255,.18); }
+.home-club-statements > div { padding: 30px 0; display: grid; grid-template-columns: 70px 150px 1fr; gap: 20px; border-bottom: 1px solid rgba(255,255,255,.18); }
+.home-club-statements span { color: var(--oro); font-family: var(--font-titoli); font-size: 30px; }
+.home-club-statements strong { font-size: 18px; }
+.home-club-statements p { color: rgba(255,255,255,.62); }
+
+.home-history-feature { position: relative; min-height: 760px; padding: 100px 7%; display: flex; align-items: flex-end; overflow: hidden; color: var(--bianco); }
+.home-history-feature > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.home-history-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,5,6,.95), rgba(9,5,6,.5) 60%, rgba(9,5,6,.18)); }
+.home-history-content { position: relative; z-index: 2; max-width: 900px; }
+.home-history-content > p:not(.section-label) { max-width: 650px; margin: 28px 0 34px; color: rgba(255,255,255,.74); font-size: 18px; }
+
+.home-partners-simple { display: grid; grid-template-columns: 1fr .6fr; align-items: end; gap: 60px; background: #fff; }
+.home-partners-simple .section-heading { margin-bottom: 0; }
+.home-partners-simple > p { color: var(--grigio); font-size: 18px; line-height: 1.8; }
+
+.home-disciplines { background: var(--avorio); }
+.home-disciplines-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.home-discipline-card { position: relative; min-height: 680px; padding: 60px 48px; overflow: hidden; color: var(--bianco); }
+.home-discipline-football { display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(145deg, #520912, #941827); }
+.home-discipline-boxing > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.08); }
+.home-discipline-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,5,6,.94), rgba(10,5,6,.26)); }
+.home-discipline-number { position: relative; z-index: 2; color: var(--oro); font-family: var(--font-titoli); font-size: 48px; }
+.home-discipline-content,
+.home-discipline-football > div:last-child { position: relative; z-index: 2; }
+.home-discipline-card h3 { margin-bottom: 22px; font-family: var(--font-titoli); font-size: clamp(54px, 6vw, 86px); font-weight: 600; line-height: .88; }
+.home-discipline-card p:not(.section-label) { max-width: 570px; margin-bottom: 30px; color: rgba(255,255,255,.74); font-size: 17px; }
+.home-discipline-links { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.home-contact-final { display: grid; grid-template-columns: 1fr .55fr; align-items: end; gap: 70px; color: var(--bianco); background: var(--rosso-scuro); }
+.home-contact-final > div:last-child p { margin-bottom: 26px; color: rgba(255,255,255,.7); font-size: 18px; }
+
+@media (max-width: 1000px) {
+  .home-news-grid { grid-template-columns: 1fr; }
+  .home-news-grid article { border-right: 0; border-bottom: 1px solid var(--bordo); }
+  .home-club-general,
+  .home-partners-simple,
+  .home-contact-final { grid-template-columns: 1fr; }
+  .home-disciplines-grid { grid-template-columns: 1fr; }
 }
 
-.boxing-hero-v2-content {
-  position: relative;
-  z-index: 2;
-  width: min(1180px, 86%);
-  margin: 0 auto;
-  padding: 90px 0 110px;
-}
-
-.boxing-kicker {
-  margin-bottom: 20px;
-  color: var(--oro);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2.8px;
-  text-transform: uppercase;
-}
-
-.boxing-hero-v2 h1 {
-  max-width: 980px;
-  font-family: var(--font-titoli);
-  font-size: clamp(78px, 12vw, 172px);
-  font-weight: 600;
-  line-height: .77;
-}
-
-.boxing-hero-v2-content > p:not(.boxing-kicker) {
-  max-width: 660px;
-  margin: 34px 0;
-  color: rgba(255,255,255,.78);
-  font-size: 19px;
-}
-
-.boxing-facts {
-  padding: 0 7%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  color: var(--bianco);
-  background: #100708;
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-
-.boxing-facts > div {
-  min-height: 145px;
-  padding: 32px 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-right: 1px solid rgba(255,255,255,.12);
-}
-
-.boxing-facts > div:last-child { border-right: 0; }
-.boxing-facts span { color: var(--oro); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-.boxing-facts strong { margin-top: 8px; font-family: var(--font-titoli); font-size: 30px; }
-
-.boxing-story-v2,
-.boxing-past,
-.boxing-museum-v2,
-.boxing-contact-v2 {
-  padding: 120px 7%;
-}
-
-.boxing-story-v2 {
-  color: var(--bianco);
-  background: #100708;
-}
-
-.boxing-story-copy { max-width: 870px; margin-bottom: 64px; }
-.boxing-story-copy h2,
-.boxing-ring-v2 h2,
-.boxing-recognition h2,
-.boxing-past h2,
-.boxing-museum-v2 h2,
-.boxing-contact-v2 h2,
-.boxing-location h2 {
-  font-family: var(--font-titoli);
-  font-size: clamp(58px, 7vw, 102px);
-  font-weight: 600;
-  line-height: .88;
-}
-
-.boxing-story-copy > p:last-child,
-.boxing-ring-v2 > div > p:last-child,
-.boxing-recognition-copy > p:last-child,
-.boxing-museum-v2-copy > p:last-child,
-.boxing-contact-v2-copy > p:last-child,
-.boxing-location-copy > p {
-  max-width: 760px;
-  margin-top: 28px;
-  color: rgba(255,255,255,.7);
-  font-size: 17px;
-  line-height: 1.9;
-}
-
-.boxing-story-images {
-  display: grid;
-  grid-template-columns: 1.3fr .7fr;
-  grid-template-rows: repeat(2, minmax(260px, 390px));
-  gap: 18px;
-}
-
-.boxing-story-images figure { overflow: hidden; background: #1b1012; }
-.boxing-story-main { grid-row: 1 / 3; }
-.boxing-story-images img,
-.boxing-museum-v2-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.boxing-ring-v2,
-.boxing-recognition {
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  min-height: 700px;
-}
-
-.boxing-ring-v2 { color: var(--bianco); background: #1b0a0d; }
-.boxing-ring-v2 figure,
-.boxing-recognition figure { overflow: hidden; min-height: 560px; }
-.boxing-ring-v2 figure img,
-.boxing-recognition figure img { width: 100%; height: 100%; object-fit: cover; }
-.boxing-ring-v2 > div,
-.boxing-recognition-copy { padding: 90px 8%; display: flex; flex-direction: column; justify-content: center; }
-
-.boxing-recognition { color: var(--nero); background: var(--avorio); }
-.boxing-recognition-copy > p:last-child { color: var(--grigio); }
-
-.boxing-past { color: var(--bianco); background: #0b0809; }
-.boxing-past .section-introduction { color: rgba(255,255,255,.62); }
-
-.boxing-person {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-  border-top: 1px solid rgba(255,255,255,.14);
-}
-
-.boxing-person:last-child { border-bottom: 1px solid rgba(255,255,255,.14); }
-.boxing-person figure { min-height: 560px; overflow: hidden; }
-.boxing-person figure img { width: 100%; height: 100%; object-fit: cover; }
-.boxing-person > div { padding: 72px 8%; display: flex; flex-direction: column; justify-content: center; }
-.boxing-person-role { margin-bottom: 16px; color: var(--oro); font-size: 11px; font-weight: 700; letter-spacing: 2.3px; text-transform: uppercase; }
-.boxing-person h3 { margin-bottom: 24px; font-family: var(--font-titoli); font-size: clamp(42px, 5vw, 72px); font-weight: 600; line-height: .92; }
-.boxing-person > div > p:last-child { color: rgba(255,255,255,.7); font-size: 17px; line-height: 1.9; }
-
-.boxing-museum-v2 { color: var(--nero); background: var(--avorio); }
-.boxing-museum-v2-copy { max-width: 900px; margin-bottom: 58px; }
-.boxing-museum-v2-copy > p:last-child { color: var(--grigio); }
-.boxing-museum-v2-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-.boxing-museum-v2-grid figure { position: relative; min-height: 390px; overflow: hidden; background: #e3dccf; }
-.boxing-museum-v2-grid figure.wide { grid-column: 1 / -1; min-height: 540px; }
-.boxing-museum-v2-grid figcaption { position: absolute; left: 18px; bottom: 18px; padding: 9px 12px; color: #fff; background: rgba(0,0,0,.72); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
-
-.boxing-contact-v2 {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 80px;
-  color: var(--bianco);
-  background:
-    radial-gradient(circle at top right, rgba(198,161,90,.18), transparent 32%),
-    linear-gradient(135deg, #16080a 0%, #2b0a11 100%);
-}
-
-.boxing-contact-cards { display: grid; gap: 14px; }
-.boxing-contact-card {
-  min-height: 150px;
-  padding: 28px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--bianco);
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.04);
-  transition: transform .25s ease, background .25s ease, border-color .25s ease;
-}
-.boxing-contact-card:hover { transform: translateY(-3px); background: rgba(255,255,255,.08); border-color: rgba(198,161,90,.65); }
-.boxing-contact-card-primary { color: #101010; background: var(--oro); border-color: var(--oro); }
-.boxing-contact-card-primary:hover { background: #d6b46f; }
-.boxing-contact-card span { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
-.boxing-contact-card strong { margin: 10px 0 5px; font-size: clamp(20px, 2.2vw, 30px); overflow-wrap: anywhere; }
-.boxing-contact-card small { font-weight: 700; }
-
-.boxing-location {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  min-height: 640px;
-  color: var(--nero);
-  background: var(--avorio);
-}
-.boxing-location-copy { padding: 90px 9%; display: flex; flex-direction: column; justify-content: center; }
-.boxing-location-copy > p { color: var(--grigio); }
-.boxing-location-copy .button { align-self: flex-start; margin-top: 30px; }
-.boxing-map { min-height: 520px; }
-.boxing-map iframe { width: 100%; height: 100%; min-height: 640px; border: 0; }
-
-.boxing-final {
-  min-height: 600px;
-  padding: 100px 7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--bianco);
-  background:
-    linear-gradient(135deg, rgba(82,9,18,.96), rgba(14,5,7,.98)),
-    url("pugilato-hero.jpg") center/cover;
-}
-.boxing-final blockquote { max-width: 1000px; margin-bottom: 42px; font-family: var(--font-titoli); font-size: clamp(58px, 8vw, 108px); font-weight: 600; line-height: .88; }
-.boxing-final .button { align-self: flex-start; }
-
-@media (max-width: 950px) {
-  .boxing-facts { grid-template-columns: repeat(2, 1fr); }
-  .boxing-facts > div:nth-child(2) { border-right: 0; }
-  .boxing-ring-v2,
-  .boxing-recognition,
-  .boxing-contact-v2,
-  .boxing-location { grid-template-columns: 1fr; }
-  .boxing-person { grid-template-columns: 1fr; }
-  .boxing-person-gabriele > div { order: 2; }
-  .boxing-person-gabriele figure { order: 1; }
-  .boxing-location-copy { min-height: 480px; }
-}
-
-@media (max-width: 650px) {
-  .boxing-hero-v2 { min-height: 78vh; }
-  .boxing-hero-v2 h1 { font-size: clamp(68px, 22vw, 104px); }
-  .boxing-facts { grid-template-columns: 1fr; }
-  .boxing-facts > div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
-  .boxing-story-v2,
-  .boxing-past,
-  .boxing-museum-v2,
-  .boxing-contact-v2 { padding: 86px 24px; }
-  .boxing-story-images,
-  .boxing-museum-v2-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .boxing-story-main,
-  .boxing-museum-v2-grid figure.wide { grid-row: auto; grid-column: auto; }
-  .boxing-story-images figure,
-  .boxing-museum-v2-grid figure { min-height: 300px; }
-  .boxing-ring-v2 > div,
-  .boxing-recognition-copy,
-  .boxing-person > div,
-  .boxing-location-copy { padding: 70px 24px; }
-  .boxing-person figure { min-height: 420px; }
+@media (max-width: 700px) {
+  .multi-hero { min-height: 82vh; padding: 70px 24px; }
+  .multi-hero-logo { height: 105px; }
+  .multi-hero h1 { font-size: clamp(58px, 18vw, 92px); }
+  .home-news-first,
+  .home-club-general,
+  .home-partners-simple,
+  .home-disciplines,
+  .home-contact-final { padding: 86px 24px; }
+  .home-club-statements > div { grid-template-columns: 55px 1fr; }
+  .home-club-statements p { grid-column: 2; }
+  .home-history-feature { min-height: 680px; padding: 80px 24px; }
+  .home-discipline-card { min-height: 580px; padding: 48px 28px; }
 }

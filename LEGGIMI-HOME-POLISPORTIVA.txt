@@ -1,0 +1,19 @@
+NUOVA HOME POLISPORTIVA — ACS AUDACE
+
+La Home è stata rifatta per non sembrare un sito solo calcistico.
+
+Ordine:
+1. Hero istituzionale.
+2. News.
+3. Presentazione generale della polisportiva.
+4. Progetto 1901.
+5. Partner.
+6. Calcio a 8 e Pugilato alla fine della pagina.
+7. Contatti.
+
+Caricamento:
+1. Estrai lo ZIP.
+2. GitHub > audace-1901 > Add file > Upload files.
+3. Trascina tutti i file estratti.
+4. Commit: Nuova Home polisportiva ACS Audace
+5. Attendi 1-3 minuti e aggiorna il sito.
