@@ -1,0 +1,24 @@
+PUGILATO V2 — ACS AUDACE
+
+File principali:
+- pugilato.html
+- style.css
+- fotografie ottimizzate
+- script.js
+- stemma
+
+Novità:
+- pagina Pugilato completamente rifatta;
+- Cesare Venturini e Gabriele Venturini;
+- targa “Un secolo di sport e di Roma”;
+- contatti ordinati e professionali;
+- WhatsApp, telefono ed email;
+- Google Maps di Via Frangipane 12;
+- galleria storica e cimeli.
+
+Caricamento:
+1. Estrai lo ZIP.
+2. GitHub > audace-1901 > Add file > Upload files.
+3. Trascina tutti i file estratti.
+4. Commit: Rifacimento completo pagina Pugilato
+5. Attendi 1-3 minuti e aggiorna il sito.
