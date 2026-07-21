@@ -1,0 +1,14 @@
+CORREZIONE CLUB / PUGILATO
+
+Problema corretto:
+- Rimossa dalla pagina Club la vecchia sezione Pugilato vuota.
+- La nuova pagina Pugilato resta separata e raggiungibile da menu e footer.
+- Eventuali vecchi link club.html#pugilato ora puntano a pugilato.html.
+
+COME CARICARE
+1. Estrai lo ZIP.
+2. Vai su GitHub > audace-1901.
+3. Add file > Upload files.
+4. Trascina solo club.html.
+5. Commit: Correzione pagina Club Pugilato
+6. Attendi 1-3 minuti e aggiorna il sito.
