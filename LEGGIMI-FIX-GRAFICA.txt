@@ -1,0 +1,23 @@
+FIX GRAFICO HOME + PUGILATO
+
+Perché prima si rompeva:
+- Lo ZIP Home caricava style.css.
+- Lo ZIP Pugilato caricava un altro style.css.
+- Il secondo sostituiva il primo, quindi la Home o il Pugilato perdevano quasi tutta la grafica.
+
+Questo pacchetto contiene UN SOLO style.css con:
+- grafica Home;
+- grafica Pugilato;
+- correzioni finali di contrasto, spazi e colori.
+
+COME CARICARE
+1. Estrai lo ZIP.
+2. GitHub > audace-1901 > Add file > Upload files.
+3. Trascina TUTTI i file estratti.
+4. Commit: Fix grafico definitivo Home e Pugilato
+5. Attendi 2-3 minuti.
+6. Aggiorna con Cmd+Shift+R.
+
+IMPORTANTE
+Dopo questo caricamento non ricaricare i due vecchi ZIP Home o Pugilato,
+perché contengono fogli style.css separati.
