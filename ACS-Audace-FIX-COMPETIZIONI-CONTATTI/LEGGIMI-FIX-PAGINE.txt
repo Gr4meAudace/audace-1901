@@ -1,0 +1,18 @@
+FIX PAGINE SECONDARIE ACS AUDACE
+
+Corrette:
+- Club
+- Prima squadra
+- Stagione 2026/27
+- News
+- Partner
+- Contatti
+
+Non modificati:
+- Home
+- Pugilato
+- Progetto 1901
+
+Carica tutti i file estratti nello stesso repository.
+Commit consigliato:
+Correzione pagine secondarie ACS Audace

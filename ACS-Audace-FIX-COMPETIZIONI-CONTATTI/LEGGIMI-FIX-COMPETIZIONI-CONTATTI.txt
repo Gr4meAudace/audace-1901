@@ -1,0 +1,20 @@
+CORREZIONI APPLICATE
+
+1. Stagione 2026/27:
+- Serie A
+- Coppa Italia Serie A
+- Coppa di Lega
+con tre schede separate.
+
+2. Prima squadra:
+- Staff tecnico: soltanto Nicolò Gramenzi, Allenatore.
+
+3. Contatti:
+- WhatsApp e telefono fisso solo nella pagina Pugilato.
+- Email disponibile in tutto il sito.
+- Pagina Contatti generale: soltanto email.
+
+CARICAMENTO
+Carica tutti i file insieme nel repository.
+Commit consigliato:
+Correzione competizioni e contatti
