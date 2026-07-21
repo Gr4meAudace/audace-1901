@@ -1,1 +1,11 @@
-Aggiornare la pagina Prima Squadra con il solo allenatore Nicolò Gramenzi e la pagina Stagione con le tre competizioni.
+AGGIORNAMENTO PUGILATO
+
+- Inserita la foto del ring in bianco e nero.
+- Inserita la foto di Cassius Clay / Muhammad Ali alle Olimpiadi di Roma 1960.
+- Eliminati i doppioni nella pagina.
+- Inserita una sezione dedicata al ring olimpico.
+- Mantenuti i testi ampliati di Cesare e Gabriele Venturini.
+
+Carica tutti i file estratti insieme.
+Commit:
+Aggiornamento foto uniche Pugilato

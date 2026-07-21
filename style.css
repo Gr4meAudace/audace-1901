@@ -101,3 +101,100 @@ img{display:block;max-width:100%}a{color:inherit}.wrap{width:min(var(--max),86vw
   .match-card>div{border-right:0;border-bottom:1px solid #ddd6cc}
   .season-list>div,.org-list>div{grid-template-columns:1fr}
 }
+
+
+/* FIX COMPETIZIONI E CONTATTI */
+
+.coach-card{
+  min-height:220px;
+  padding:38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.05)
+}
+.coach-card span{
+  color:var(--gold);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1.8px;
+  text-transform:uppercase
+}
+.coach-card strong{
+  margin-top:16px;
+  font:600 clamp(36px,4vw,58px)/1 var(--serif)
+}
+
+.competition-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:42px
+}
+.competition-tab{
+  padding:15px 20px;
+  border:1px solid #cfc7bc;
+  background:#fff;
+  color:#111;
+  font-weight:700;
+  cursor:pointer
+}
+.competition-tab.active{
+  color:#fff;
+  background:var(--red);
+  border-color:var(--red)
+}
+.competition-panel{display:none}
+.competition-panel.active{display:block}
+.competition-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:end;
+  margin-bottom:28px
+}
+.competition-head>div{
+  display:flex;
+  gap:20px;
+  align-items:end
+}
+.competition-head span{
+  color:var(--red);
+  font:600 36px/1 var(--serif)
+}
+.competition-head h3{
+  margin:0;
+  font:600 clamp(38px,5vw,62px)/1 var(--serif)
+}
+.competition-head p{
+  max-width:420px;
+  color:var(--muted)
+}
+.competition-panel .season-list{margin-top:30px}
+.contact-email-only{
+  grid-template-columns:1fr!important;
+  max-width:760px
+}
+
+@media(max-width:700px){
+  .competition-head{
+    align-items:flex-start;
+    flex-direction:column
+  }
+  .competition-head>div{
+    align-items:flex-start;
+    flex-direction:column
+  }
+}
+
+
+/* PUGILATO — FOTO UNICHE */
+.page-boxing .ali-feature img { object-position: center; }
+.page-boxing .ali-feature > div p:not(.eyebrow) {
+  margin: 0 0 18px;
+  color: rgba(255,255,255,.76);
+  font-size: 17px;
+  line-height: 1.82;
+}
+.page-boxing .gallery-hero img { object-position: center; }
