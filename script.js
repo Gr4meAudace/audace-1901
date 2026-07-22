@@ -1,21 +1,19 @@
-const menuButton = document.querySelector(".menu-button");
-const navigation = document.querySelector(".main-navigation");
-const navigationLinks = document.querySelectorAll(".main-navigation a");
 
-if (menuButton && navigation) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("is-open");
-
-    menuButton.setAttribute(
-      "aria-expanded",
-      isOpen ? "true" : "false"
-    );
-  });
-
-  navigationLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      navigation.classList.remove("is-open");
-      menuButton.setAttribute("aria-expanded", "false");
-    });
+const button = document.querySelector('.menu-button');
+const nav = document.querySelector('.main-navigation');
+if (button && nav) {
+  button.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('is-open');
   });
 }
+const reveal = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('is-visible');
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('main section, .news-card, .news-feature, .person-card').forEach(el => {
+  el.classList.add('reveal');
+  reveal.observe(el);
+});
