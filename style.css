@@ -198,3 +198,251 @@ img{display:block;max-width:100%}a{color:inherit}.wrap{width:min(var(--max),86vw
   line-height: 1.82;
 }
 .page-boxing .gallery-hero img { object-position: center; }
+/* ==========================================
+   ROSA PRIMA SQUADRA 2026/27
+   ========================================== */
+
+.team-roster-section {
+  padding: 120px 7%;
+  background: #f3eee5;
+}
+
+.team-roster-header {
+  max-width: 850px;
+  margin-bottom: 85px;
+}
+
+.team-roster-header h2,
+.team-staff-header h2 {
+  margin: 0;
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(58px, 7vw, 100px);
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+.team-roster-intro {
+  max-width: 650px;
+  margin-top: 25px;
+  color: #69635c;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.roster-group {
+  margin-top: 100px;
+}
+
+.roster-group-title {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #cec6bb;
+}
+
+.roster-group-title span {
+  color: #941827;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.roster-group-title h3 {
+  margin: 0;
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 600;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.player-card {
+  position: relative;
+  min-height: 450px;
+  overflow: hidden;
+  border: 1px solid #d5cec4;
+  background: #fff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(24, 17, 13, 0.13);
+}
+
+.player-number {
+  position: absolute;
+  top: -15px;
+  right: 14px;
+  z-index: 0;
+  color: rgba(148, 24, 39, 0.10);
+  font-family: var(--serif, Georgia, serif);
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.player-photo-placeholder {
+  position: relative;
+  z-index: 1;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center, #f4efe8 0%, #e8e1d7 100%);
+}
+
+.player-photo-placeholder span {
+  width: 82px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bdb4a8;
+  border-radius: 50%;
+  color: #941827;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.player-info {
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+}
+
+.player-info strong {
+  display: block;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 25px;
+  line-height: 1.05;
+}
+
+.player-info small {
+  display: block;
+  margin-top: 9px;
+  color: #941827;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+/* STAFF */
+
+.team-staff-section {
+  padding: 120px 7%;
+  color: #fff;
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(208, 170, 94, 0.14),
+      transparent 28%
+    ),
+    #111;
+}
+
+.team-staff-header {
+  margin-bottom: 65px;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 20px;
+}
+
+.staff-card {
+  min-height: 220px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.staff-card-main {
+  background: linear-gradient(145deg, #4f0710, #941827);
+  border-color: transparent;
+}
+
+.staff-card span {
+  margin-bottom: 14px;
+  color: #d0aa5e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.staff-card strong {
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(24px, 2.7vw, 38px);
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .players-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .staff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .team-roster-section,
+  .team-staff-section {
+    padding: 85px 24px;
+  }
+
+  .players-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .player-card {
+    min-height: 360px;
+  }
+
+  .player-photo-placeholder {
+    height: 230px;
+  }
+
+  .player-number {
+    font-size: 95px;
+  }
+
+  .player-info {
+    padding: 18px;
+  }
+
+  .player-info strong {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .players-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+}
