@@ -15,15 +15,11 @@
   <link rel="icon" href="Stemma_ACS_Audace_png.png">
   <link rel="stylesheet" href="style.css">
 
-  <!--
-    STILI SPECIFICI DELLA ROSA.
-    Il resto del sito continua a usare style.css.
-  -->
   <style>
 
-    /* =========================================
+    /* =========================
        ROSA 2026/27
-       ========================================= */
+       ========================= */
 
     .team-roster-section {
       padding: 110px 7%;
@@ -65,19 +61,9 @@
     }
 
     .roster-group-title {
-      display: flex;
-      align-items: baseline;
-      gap: 22px;
       padding-bottom: 20px;
       margin-bottom: 34px;
       border-bottom: 1px solid #cec6bb;
-    }
-
-    .roster-group-title span {
-      color: #941827;
-      font-family: var(--serif, Georgia, serif);
-      font-size: 34px;
-      font-weight: 600;
     }
 
     .roster-group-title h3 {
@@ -99,6 +85,7 @@
       overflow: hidden;
       border: 1px solid #d6cec3;
       background: #fff;
+
       transition:
         transform .3s ease,
         box-shadow .3s ease;
@@ -109,18 +96,34 @@
       box-shadow: 0 22px 50px rgba(20, 14, 10, .12);
     }
 
+    /* NUMERO MAGLIA */
+
     .player-number {
       position: absolute;
-      top: -15px;
-      right: 12px;
-      z-index: 0;
+      top: 18px;
+      left: 18px;
 
-      color: rgba(148, 24, 39, .10);
+      z-index: 5;
+
+      width: 62px;
+      height: 62px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #941827;
+      background: #fff;
+
+      border: 2px solid #941827;
+      border-radius: 50%;
 
       font-family: var(--serif, Georgia, serif);
-      font-size: 125px;
+      font-size: 29px;
       font-weight: 700;
       line-height: 1;
+
+      box-shadow: 0 7px 18px rgba(0,0,0,.12);
     }
 
     .player-photo-placeholder {
@@ -162,7 +165,6 @@
     .player-info {
       position: relative;
       z-index: 2;
-
       padding: 25px;
     }
 
@@ -189,9 +191,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        STAFF
-       ========================================= */
+       ========================= */
 
     .team-staff-section {
       padding: 115px 7%;
@@ -274,9 +276,9 @@
     }
 
 
-    /* =========================================
+    /* =========================
        RESPONSIVE
-       ========================================= */
+       ========================= */
 
     @media (max-width: 1100px) {
 
@@ -289,7 +291,6 @@
       }
 
     }
-
 
     @media (max-width: 760px) {
 
@@ -312,7 +313,11 @@
       }
 
       .player-number {
-        font-size: 90px;
+        width: 52px;
+        height: 52px;
+        top: 14px;
+        left: 14px;
+        font-size: 24px;
       }
 
       .player-info {
@@ -329,7 +334,6 @@
 
     }
 
-
     @media (max-width: 430px) {
 
       .players-grid {
@@ -344,664 +348,538 @@
 
 <body class="page-team">
 
-  <!-- ========================================
-       HEADER
-       ======================================== -->
+<header class="site-header">
 
-  <header class="site-header">
-
-    <a
-      class="brand"
-      href="index.html"
-      aria-label="ACS Audace Home"
+  <a
+    class="brand"
+    href="index.html"
+    aria-label="ACS Audace Home"
+  >
+    <img
+      src="Stemma_ACS_Audace_png.png"
+      alt="ACS Audace"
     >
-      <img
-        src="Stemma_ACS_Audace_png.png"
-        alt="ACS Audace"
-      >
-    </a>
+  </a>
 
-    <button
-      class="menu-button"
-      type="button"
-      aria-label="Apri il menu"
-      aria-expanded="false"
-      aria-controls="main-navigation"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <button
+    class="menu-button"
+    type="button"
+    aria-label="Apri il menu"
+    aria-expanded="false"
+    aria-controls="main-navigation"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-    <nav
-      class="main-navigation"
-      id="main-navigation"
-      aria-label="Navigazione principale"
-    >
+  <nav
+    class="main-navigation"
+    id="main-navigation"
+    aria-label="Navigazione principale"
+  >
 
-      <a href="1901.html">1901</a>
-      <a href="club.html">Club</a>
-      <a href="prima-squadra.html">Prima squadra</a>
-      <a href="stagione-2026-27.html">Stagione 2026/27</a>
-      <a href="pugilato.html">Pugilato</a>
-      <a href="news.html">News</a>
-      <a href="partner.html">Partner</a>
-      <a href="contatti.html">Contatti</a>
+    <a href="1901.html">1901</a>
+    <a href="club.html">Club</a>
+    <a href="prima-squadra.html">Prima squadra</a>
+    <a href="stagione-2026-27.html">Stagione 2026/27</a>
+    <a href="pugilato.html">Pugilato</a>
+    <a href="news.html">News</a>
+    <a href="partner.html">Partner</a>
+    <a href="contatti.html">Contatti</a>
 
-    </nav>
+  </nav>
 
-  </header>
+</header>
 
 
-  <main>
+<main>
 
-    <!-- ========================================
-         HERO
-         ======================================== -->
+  <!-- HERO -->
 
-    <section class="simple-hero red-hero">
+  <section class="simple-hero red-hero">
 
-      <div class="wrap simple-hero-grid">
+    <div class="wrap simple-hero-grid">
 
-        <div>
+      <div>
 
-          <p class="eyebrow gold">
-            Calcio a 8
-          </p>
+        <p class="eyebrow gold">
+          Calcio a 8
+        </p>
 
-          <h1>
-            Prima squadra.
-          </h1>
+        <h1>
+          Prima squadra.
+        </h1>
 
-          <p>
-            La squadra, lo staff e il percorso sportivo
-            dell’Audace.
-          </p>
+        <p>
+          La squadra, lo staff e il percorso sportivo
+          dell’Audace.
+        </p>
 
-          <a
-            class="btn btn-light"
-            href="stagione-2026-27.html"
-          >
-            Vai alla stagione
-          </a>
-
-        </div>
-
-        <div class="crest-panel">
-
-          <img
-            src="Stemma_ACS_Audace_png.png"
-            alt="Stemma ACS Audace"
-          >
-
-        </div>
+        <a
+          class="btn btn-light"
+          href="stagione-2026-27.html"
+        >
+          Vai alla stagione
+        </a>
 
       </div>
 
-    </section>
-
-
-    <!-- ========================================
-         ROSA
-         ======================================== -->
-
-    <section class="team-roster-section">
-
-      <div class="team-roster-inner">
-
-        <div class="team-roster-header">
-
-          <p class="eyebrow red">
-            Prima Squadra
-          </p>
-
-          <h2>
-            Rosa 2026/27.
-          </h2>
-
-          <p class="team-roster-intro">
-            La rosa dell’ACS Audace per la stagione 2026/27.
-          </p>
-
-        </div>
-
-
-        <!-- PORTIERI -->
-
-        <div class="roster-group">
-
-          <div class="roster-group-title">
-            <span>01</span>
-            <h3>Portieri</h3>
-          </div>
-
-          <div class="players-grid">
-
-
-            <article class="player-card">
-
-              <div class="player-number">
-                1
-              </div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>
-                  Lorenzo Fresilli
-                </strong>
-                <small>
-                  Portiere
-                </small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">
-                12
-              </div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>
-                  Tommaso Baccarini
-                </strong>
-                <small>
-                  Portiere
-                </small>
-              </div>
-
-            </article>
-
-          </div>
-
-        </div>
-
-
-        <!-- DIFENSORI -->
-
-        <div class="roster-group">
-
-          <div class="roster-group-title">
-            <span>02</span>
-            <h3>Difensori</h3>
-          </div>
-
-          <div class="players-grid">
-
-
-            <article class="player-card">
-
-              <div class="player-number">6</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Matteo Gasperini</strong>
-                <small>Difensore</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">34</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Simone Guadagnini</strong>
-                <small>Difensore</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">14</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Mauro Iacobelli</strong>
-                <small>Difensore</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">5</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Francesco Laudati</strong>
-                <small>Difensore</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">2</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Lorenzo Cavaterra</strong>
-                <small>Difensore</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">3</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Stefano Marsinano</strong>
-                <small>Difensore</small>
-              </div>
-
-            </article>
-
-          </div>
-
-        </div>
-
-
-        <!-- CENTROCAMPISTI -->
-
-        <div class="roster-group">
-
-          <div class="roster-group-title">
-            <span>03</span>
-            <h3>Centrocampisti</h3>
-          </div>
-
-          <div class="players-grid">
-
-
-            <article class="player-card">
-
-              <div class="player-number">28</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Thomas Barone</strong>
-                <small>Centrocampista</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">4</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Mario Di Lauro</strong>
-                <small>Centrocampista</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">10</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Lorenzo Laudati</strong>
-                <small>Centrocampista</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">8</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Cesare Odero</strong>
-                <small>Centrocampista</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">19</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Fabio Tramonti</strong>
-                <small>Centrocampista</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">11</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Gianmarco Trevisone</strong>
-                <small>Centrocampista</small>
-              </div>
-
-            </article>
-
-          </div>
-
-        </div>
-
-
-        <!-- ATTACCANTI -->
-
-        <div class="roster-group">
-
-          <div class="roster-group-title">
-            <span>04</span>
-            <h3>Attaccanti</h3>
-          </div>
-
-          <div class="players-grid">
-
-
-            <article class="player-card">
-
-              <div class="player-number">7</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Alessandro Barbarossa</strong>
-                <small>Attaccante</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">9</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Flavio Condotta</strong>
-                <small>Attaccante</small>
-              </div>
-
-            </article>
-
-
-            <article class="player-card">
-
-              <div class="player-number">99</div>
-
-              <div class="player-photo-placeholder">
-                <span>ACS</span>
-              </div>
-
-              <div class="player-info">
-                <strong>Mattia Hazizi</strong>
-                <small>Attaccante</small>
-              </div>
-
-            </article>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ========================================
-         STAFF
-         ======================================== -->
-
-    <section class="team-staff-section">
-
-      <div class="team-staff-inner">
-
-        <div class="team-staff-header">
-
-          <p class="eyebrow gold">
-            Staff
-          </p>
-
-          <h2>
-            Area tecnica<br>
-            e dirigenziale.
-          </h2>
-
-        </div>
-
-
-        <div class="staff-grid">
-
-
-          <article class="staff-card staff-card-main">
-
-            <span>
-              Allenatore
-            </span>
-
-            <strong>
-              Nicolò Mauro Gramenzi
-            </strong>
-
-          </article>
-
-
-          <article class="staff-card">
-
-            <span>
-              Dirigente
-            </span>
-
-            <strong>
-              Jacopo Gramenzi
-            </strong>
-
-          </article>
-
-
-          <article class="staff-card">
-
-            <span>
-              Dirigente
-            </span>
-
-            <strong>
-              Emanuele Carrese
-            </strong>
-
-          </article>
-
-
-          <article class="staff-card">
-
-            <span>
-              Dirigente
-            </span>
-
-            <strong>
-              Gianmarco Di Virgilio
-            </strong>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- ========================================
-       FOOTER
-       Telefono e WhatsApp NON compaiono qui.
-       Restano soltanto nella pagina Pugilato.
-       ======================================== -->
-
-  <footer class="site-footer">
-
-    <div class="footer-main">
-
-
-      <div class="footer-brand">
+      <div class="crest-panel">
 
         <img
           src="Stemma_ACS_Audace_png.png"
-          alt=""
+          alt="Stemma ACS Audace"
         >
 
-        <div>
-          <strong>ACS Audace</strong>
-          <span>Roma · Dal 1901</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROSA -->
+
+  <section class="team-roster-section">
+
+    <div class="team-roster-inner">
+
+      <div class="team-roster-header">
+
+        <p class="eyebrow red">
+          Prima Squadra
+        </p>
+
+        <h2>
+          Rosa 2026/27.
+        </h2>
+
+        <p class="team-roster-intro">
+          La rosa dell’ACS Audace per la stagione 2026/27.
+        </p>
+
+      </div>
+
+
+      <!-- PORTIERI -->
+
+      <div class="roster-group">
+
+        <div class="roster-group-title">
+          <h3>Portieri</h3>
+        </div>
+
+        <div class="players-grid">
+
+
+          <article class="player-card">
+
+            <div class="player-number">1</div>
+
+            <div class="player-photo-placeholder">
+              <span>ACS</span>
+            </div>
+
+            <div class="player-info">
+              <strong>Lorenzo Fresilli</strong>
+              <small>Portiere</small>
+            </div>
+
+          </article>
+
+
+          <article class="player-card">
+
+            <div class="player-number">12</div>
+
+            <div class="player-photo-placeholder">
+              <span>ACS</span>
+            </div>
+
+            <div class="player-info">
+              <strong>Tommaso Baccarini</strong>
+              <small>Portiere</small>
+            </div>
+
+          </article>
+
         </div>
 
       </div>
 
 
-      <div>
+      <!-- DIFENSORI -->
 
-        <span>Club</span>
+      <div class="roster-group">
 
-        <a href="club.html">
-          Il Club
-        </a>
+        <div class="roster-group-title">
+          <h3>Difensori</h3>
+        </div>
 
-        <a href="1901.html">
-          Progetto 1901
-        </a>
+        <div class="players-grid">
 
-        <a href="pugilato.html">
-          Pugilato
-        </a>
+
+          <article class="player-card">
+            <div class="player-number">6</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Matteo Gasperini</strong>
+              <small>Difensore</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">34</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Simone Guadagnini</strong>
+              <small>Difensore</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">14</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Mauro Iacobelli</strong>
+              <small>Difensore</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">5</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Francesco Laudati</strong>
+              <small>Difensore</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">2</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Lorenzo Cavaterra</strong>
+              <small>Difensore</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">3</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Stefano Marsinano</strong>
+              <small>Difensore</small>
+            </div>
+          </article>
+
+        </div>
 
       </div>
 
 
-      <div>
+      <!-- CENTROCAMPISTI -->
 
-        <span>Calcio</span>
+      <div class="roster-group">
 
-        <a href="prima-squadra.html">
-          Prima squadra
-        </a>
+        <div class="roster-group-title">
+          <h3>Centrocampisti</h3>
+        </div>
 
-        <a href="stagione-2026-27.html">
-          Stagione 2026/27
-        </a>
+        <div class="players-grid">
 
-        <a href="news.html">
-          News
-        </a>
+
+          <article class="player-card">
+            <div class="player-number">28</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Thomas Barone</strong>
+              <small>Centrocampista</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">4</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Mario Di Lauro</strong>
+              <small>Centrocampista</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">10</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Lorenzo Laudati</strong>
+              <small>Centrocampista</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">8</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Cesare Odero</strong>
+              <small>Centrocampista</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">19</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Fabio Tramonti</strong>
+              <small>Centrocampista</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">11</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Gianmarco Trevisone</strong>
+              <small>Centrocampista</small>
+            </div>
+          </article>
+
+        </div>
 
       </div>
 
 
-      <div>
+      <!-- ATTACCANTI -->
 
-        <span>Contatti</span>
+      <div class="roster-group">
 
-        <a href="mailto:acsaudace1901@outlook.it">
-          acsaudace1901@outlook.it
-        </a>
+        <div class="roster-group-title">
+          <h3>Attaccanti</h3>
+        </div>
+
+        <div class="players-grid">
+
+
+          <article class="player-card">
+            <div class="player-number">7</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Alessandro Barbarossa</strong>
+              <small>Attaccante</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">9</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Flavio Condotta</strong>
+              <small>Attaccante</small>
+            </div>
+          </article>
+
+
+          <article class="player-card">
+            <div class="player-number">99</div>
+            <div class="player-photo-placeholder"><span>ACS</span></div>
+            <div class="player-info">
+              <strong>Mattia Hazizi</strong>
+              <small>Attaccante</small>
+            </div>
+          </article>
+
+        </div>
 
       </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- STAFF -->
+
+  <section class="team-staff-section">
+
+    <div class="team-staff-inner">
+
+      <div class="team-staff-header">
+
+        <p class="eyebrow gold">
+          Staff
+        </p>
+
+        <h2>
+          Area tecnica<br>
+          e dirigenziale.
+        </h2>
+
+      </div>
+
+
+      <div class="staff-grid">
+
+
+        <article class="staff-card staff-card-main">
+
+          <span>
+            Allenatore
+          </span>
+
+          <strong>
+            Nicolò Mauro Gramenzi
+          </strong>
+
+        </article>
+
+
+        <article class="staff-card">
+
+          <span>
+            Dirigente
+          </span>
+
+          <strong>
+            Jacopo Gramenzi
+          </strong>
+
+        </article>
+
+
+        <article class="staff-card">
+
+          <span>
+            Dirigente
+          </span>
+
+          <strong>
+            Emanuele Carrese
+          </strong>
+
+        </article>
+
+
+        <article class="staff-card">
+
+          <span>
+            Dirigente
+          </span>
+
+          <strong>
+            Gianmarco Di Virgilio
+          </strong>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="footer-main">
+
+
+    <div class="footer-brand">
+
+      <img
+        src="Stemma_ACS_Audace_png.png"
+        alt=""
+      >
+
+      <div>
+        <strong>ACS Audace</strong>
+        <span>Roma · Dal 1901</span>
+      </div>
 
     </div>
 
 
-    <div class="footer-bottom">
+    <div>
 
-      <span>
-        © 2026 ACS Audace
-      </span>
+      <span>Club</span>
 
-      <span>
-        Roma · Dal 1901 · Oltre un secolo di storia sportiva
-      </span>
+      <a href="club.html">
+        Il Club
+      </a>
+
+      <a href="1901.html">
+        Progetto 1901
+      </a>
+
+      <a href="pugilato.html">
+        Pugilato
+      </a>
 
     </div>
 
-  </footer>
+
+    <div>
+
+      <span>Calcio</span>
+
+      <a href="prima-squadra.html">
+        Prima squadra
+      </a>
+
+      <a href="stagione-2026-27.html">
+        Stagione 2026/27
+      </a>
+
+      <a href="news.html">
+        News
+      </a>
+
+    </div>
 
 
-  <script
-    src="script.js"
-    defer>
-  </script>
+    <div>
+
+      <span>Contatti</span>
+
+      <a href="mailto:acsaudace1901@outlook.it">
+        acsaudace1901@outlook.it
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 ACS Audace
+    </span>
+
+    <span>
+      Roma · Dal 1901 · Oltre un secolo di storia sportiva
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js" defer></script>
 
 </body>
-
 </html>
