@@ -370,8 +370,104 @@
 
     @media (max-width: 430px) {
 
+      .team-roster-section,
+      .team-staff-section {
+        padding: 64px 18px;
+      }
+
+      .team-roster-header {
+        margin-bottom: 56px;
+      }
+
+      .team-roster-intro {
+        font-size: 16px;
+      }
+
+      .roster-group {
+        margin-top: 64px;
+      }
+
+      .roster-group-title {
+        margin-bottom: 24px;
+      }
+
       .players-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .player-card {
+        min-height: 0;
+      }
+
+      .player-photo-placeholder {
+        height: auto;
+        aspect-ratio: 4 / 5;
+      }
+
+      .player-photo-placeholder span {
+        width: 56px;
+        height: 56px;
+        font-size: 16px;
+      }
+
+      .player-number {
+        width: 38px;
+        height: 38px;
+        top: 8px;
+        left: 8px;
+        font-size: 18px;
+        border-width: 1.5px;
+      }
+
+      .player-info {
+        padding: 12px 12px 14px;
+      }
+
+      .player-info strong {
+        font-size: 17px;
+      }
+
+      .player-info small {
+        margin-top: 7px;
+        font-size: 9px;
+        letter-spacing: 1.2px;
+      }
+
+      .staff-card {
+        min-height: 150px;
+        padding: 22px;
+      }
+
+    }
+
+    @media (max-width: 340px) {
+
+      .player-info strong {
+        font-size: 15px;
+      }
+
+    }
+
+    /* Le sezioni molto alte su mobile non raggiungono mai la soglia
+       dell'animazione di comparsa (script.js) e restavano invisibili */
+
+    .team-roster-section.reveal,
+    .team-staff-section.reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Touch: un tocco sul riquadro scambia le due foto */
+
+    @media (hover: none) {
+
+      .player-photo-placeholder.has-alt.is-flipped img.photo-main {
+        opacity: 0;
+      }
+
+      .player-photo-placeholder.is-flipped img.photo-alt {
+        opacity: 1;
       }
 
     }
@@ -1014,6 +1110,14 @@
 
 
 <script src="script.js" defer></script>
+
+<script>
+  document.querySelectorAll('.player-photo-placeholder').forEach(function (box) {
+    box.addEventListener('click', function () {
+      box.classList.toggle('is-flipped');
+    });
+  });
+</script>
 
 </body>
 </html>
