@@ -171,13 +171,21 @@
       object-position: center top;
     }
 
+    .player-photo-placeholder img.photo-main,
+    .player-photo-placeholder img.photo-alt {
+      transition: opacity .35s ease;
+    }
+
     .player-photo-placeholder img.photo-alt {
       opacity: 0;
-      transition: opacity .35s ease;
     }
 
     .player-photo-placeholder:hover img.photo-alt {
       opacity: 1;
+    }
+
+    .player-photo-placeholder.has-alt:hover img.photo-main {
+      opacity: 0;
     }
 
     .player-info {
@@ -193,6 +201,14 @@
       font-size: 25px;
       font-weight: 600;
       line-height: 1.05;
+    }
+
+    .player-info strong span {
+      display: block;
+    }
+
+    .player-info strong .player-last {
+      white-space: nowrap;
     }
 
     .player-info small {
@@ -497,12 +513,12 @@
 
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/fresilli-lorenzo.png" alt="Lorenzo Fresilli" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/fresilli-lorenzo2.png" alt="Lorenzo Fresilli" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/fresilli-lorenzo2.png" alt="Lorenzo Fresilli" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
 
             <div class="player-info">
-              <strong>Lorenzo Fresilli</strong>
+              <strong><span class="player-first">Lorenzo</span> <span class="player-last">Fresilli</span></strong>
               <small>Portiere</small>
             </div>
 
@@ -515,12 +531,12 @@
 
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/baccarini.png" alt="Tommaso Baccarini" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/baccarini2.png" alt="Tommaso Baccarini" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/baccarini2.png" alt="Tommaso Baccarini" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
 
             <div class="player-info">
-              <strong>Tommaso Baccarini</strong>
+              <strong><span class="player-first">Tommaso</span> <span class="player-last">Baccarini</span></strong>
               <small>Portiere</small>
             </div>
 
@@ -546,11 +562,11 @@
             <div class="player-number">6</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/gasperini.png" alt="Matteo Gasperini" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/gasperini2.png" alt="Matteo Gasperini" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/gasperini2.png" alt="Matteo Gasperini" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Matteo Gasperini</strong>
+              <strong><span class="player-first">Matteo</span> <span class="player-last">Gasperini</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -560,11 +576,11 @@
             <div class="player-number">34</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/guadagnini.png" alt="Simone Guadagnini" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/guadagnini2.png" alt="Simone Guadagnini" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/guadagnini2.png" alt="Simone Guadagnini" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Simone Guadagnini</strong>
+              <strong><span class="player-first">Simone</span> <span class="player-last">Guadagnini</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -574,11 +590,11 @@
             <div class="player-number">14</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/iacobelli.png" alt="Mauro Iacobelli" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/iacobelli2.png" alt="Mauro Iacobelli" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/iacobelli2.png" alt="Mauro Iacobelli" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Mauro Iacobelli</strong>
+              <strong><span class="player-first">Mauro</span> <span class="player-last">Iacobelli</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -588,11 +604,11 @@
             <div class="player-number">5</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/laudati-francesco.png" alt="Francesco Laudati" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/laudati-francesco2.png" alt="Francesco Laudati" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/laudati-francesco2.png" alt="Francesco Laudati" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Francesco Laudati</strong>
+              <strong><span class="player-first">Francesco</span> <span class="player-last">Laudati</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -602,11 +618,11 @@
             <div class="player-number">2</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/cavaterra.png" alt="Lorenzo Cavaterra" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/cavaterra2.png" alt="Lorenzo Cavaterra" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/cavaterra2.png" alt="Lorenzo Cavaterra" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Lorenzo Cavaterra</strong>
+              <strong><span class="player-first">Lorenzo</span> <span class="player-last">Cavaterra</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -616,11 +632,11 @@
             <div class="player-number">3</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/marsinano.png" alt="Stefano Marsinano" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/marsinano2.png" alt="Stefano Marsinano" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/marsinano2.png" alt="Stefano Marsinano" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Stefano Marsinano</strong>
+              <strong><span class="player-first">Stefano</span> <span class="player-last">Marsinano</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -628,11 +644,11 @@
           <article class="player-card">
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/fresilli-mattia.png" alt="Mattia Fresilli" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/fresilli-mattia2.png" alt="Mattia Fresilli" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/fresilli-mattia2.png" alt="Mattia Fresilli" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Mattia Fresilli</strong>
+              <strong><span class="player-first">Mattia</span> <span class="player-last">Fresilli</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -640,11 +656,11 @@
           <article class="player-card">
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/deangelis.png" alt="Francesco De Angelis" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/deangelis2.png" alt="Francesco De Angelis" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/deangelis2.png" alt="Francesco De Angelis" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Francesco De Angelis</strong>
+              <strong><span class="player-first">Francesco</span> <span class="player-last">De Angelis</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -652,11 +668,11 @@
           <article class="player-card">
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/carini.png" alt="Andrea Carini" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/carini2.png" alt="Andrea Carini" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/carini2.png" alt="Andrea Carini" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Andrea Carini</strong>
+              <strong><span class="player-first">Andrea</span> <span class="player-last">Carini</span></strong>
               <small>Difensore</small>
             </div>
           </article>
@@ -681,11 +697,11 @@
             <div class="player-number">28</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/barone.png" alt="Thomas Barone" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/barone2.png" alt="Thomas Barone" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/barone2.png" alt="Thomas Barone" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Thomas Barone</strong>
+              <strong><span class="player-first">Thomas</span> <span class="player-last">Barone</span></strong>
               <small>Centrocampista</small>
             </div>
           </article>
@@ -695,11 +711,11 @@
             <div class="player-number">4</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/dilauro.png" alt="Mario Di Lauro" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/dilauro2.png" alt="Mario Di Lauro" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/dilauro2.png" alt="Mario Di Lauro" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Mario Di Lauro</strong>
+              <strong><span class="player-first">Mario</span> <span class="player-last">Di Lauro</span></strong>
               <small>Centrocampista</small>
             </div>
           </article>
@@ -709,11 +725,11 @@
             <div class="player-number">10</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/laudati-lorenzo.png" alt="Lorenzo Laudati" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/laudati-lorenzo2.png" alt="Lorenzo Laudati" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/laudati-lorenzo2.png" alt="Lorenzo Laudati" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Lorenzo Laudati</strong>
+              <strong><span class="player-first">Lorenzo</span> <span class="player-last">Laudati</span></strong>
               <small>Centrocampista</small>
             </div>
           </article>
@@ -723,11 +739,11 @@
             <div class="player-number">8</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/odero.png" alt="Cesare Odero" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/odero2.png" alt="Cesare Odero" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/odero2.png" alt="Cesare Odero" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Cesare Odero</strong>
+              <strong><span class="player-first">Cesare</span> <span class="player-last">Odero</span></strong>
               <small>Centrocampista</small>
             </div>
           </article>
@@ -737,11 +753,11 @@
             <div class="player-number">19</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/tramonti.png" alt="Fabio Tramonti" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/tramonti2.png" alt="Fabio Tramonti" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/tramonti2.png" alt="Fabio Tramonti" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Fabio Tramonti</strong>
+              <strong><span class="player-first">Fabio</span> <span class="player-last">Tramonti</span></strong>
               <small>Centrocampista</small>
             </div>
           </article>
@@ -751,11 +767,11 @@
             <div class="player-number">11</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/trevisone.png" alt="Gianmarco Trevisone" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/trevisone2.png" alt="Gianmarco Trevisone" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/trevisone2.png" alt="Gianmarco Trevisone" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Gianmarco Trevisone</strong>
+              <strong><span class="player-first">Gianmarco</span> <span class="player-last">Trevisone</span></strong>
               <small>Centrocampista</small>
             </div>
           </article>
@@ -780,11 +796,11 @@
             <div class="player-number">7</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/barbarossa.png" alt="Alessandro Barbarossa" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/barbarossa2.png" alt="Alessandro Barbarossa" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/barbarossa2.png" alt="Alessandro Barbarossa" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Alessandro Barbarossa</strong>
+              <strong><span class="player-first">Alessandro</span> <span class="player-last">Barbarossa</span></strong>
               <small>Attaccante</small>
             </div>
           </article>
@@ -794,11 +810,11 @@
             <div class="player-number">9</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/condotta.png" alt="Flavio Condotta" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/condotta2.png" alt="Flavio Condotta" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/condotta2.png" alt="Flavio Condotta" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Flavio Condotta</strong>
+              <strong><span class="player-first">Flavio</span> <span class="player-last">Condotta</span></strong>
               <small>Attaccante</small>
             </div>
           </article>
@@ -808,11 +824,11 @@
             <div class="player-number">99</div>
             <div class="player-photo-placeholder">
               <img class="photo-main" src="foto/hazizi.png" alt="Mattia Hazizi" loading="lazy" onload="this.parentNode.querySelector('span').style.display='none'" onerror="this.remove()">
-              <img class="photo-alt" src="foto/hazizi2.png" alt="Mattia Hazizi" loading="lazy" onerror="this.remove()">
+              <img class="photo-alt" src="foto/hazizi2.png" alt="Mattia Hazizi" loading="lazy" onload="this.parentNode.classList.add('has-alt')" onerror="this.remove()">
               <span>ACS</span>
             </div>
             <div class="player-info">
-              <strong>Mattia Hazizi</strong>
+              <strong><span class="player-first">Mattia</span> <span class="player-last">Hazizi</span></strong>
               <small>Attaccante</small>
             </div>
           </article>
